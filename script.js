@@ -33,20 +33,13 @@ function beautifyString (string) {
     if ( typeof(string) !== 'string' ) {
         alert("Была введена не строка");
     } else {
-        if (string.indexOf(" ") == 0) {
-            while (string.indexOf(" ") == 0) {
-                string = string.slice(1);
-            }
-        }
-        if ( string.lastIndexOf(" ") == (string.length - 1) ) {
-            while ( string.lastIndexOf(" ") == (string.length - 1) ) {
-                string = string.slice(0, -1);
-            }
-        }
+        
+        string = string.trim();
+
         if (string.length > 50) {
             string = string.slice(0, 51) + "...";
         }
         alert(string);
     }
 }
-// beautifyString("   Пр ивhgf ет   вап   ");
+beautifyString("   Пр ивhgf ет   вап   ");
